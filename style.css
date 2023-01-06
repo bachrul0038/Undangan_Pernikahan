@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Caramel&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  /* font-family: "Caramel", cursive; */
+}
+.navbar {
+  font-size: 30px;
+  /* position: fixed; */
+}
+.benner {
+  background: url(../img/navbar.jpeg) no-repeat center center;
+  object-fit: cover;
+  filter: brightness(0.9);
+  background-size: cover;
+  font-family: "Caramel", cursive;
+  height: 100vh;
+  -webkit-filter: brightness(0.9);
+}
+.wrapper {
+  max-width: 1080px;
+  margin: 50px auto;
+  padding: 0 20px;
+  position: relative;
+}
+.wrapper .center-line {
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  background: #fff;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+}
+.wrapper .row {
+  display: flex;
+}
+.wrapper .row-1 {
+  justify-content: flex-start;
+}
+.wrapper .row-2 {
+  justify-content: flex-end;
+}
+.wrapper .row section {
+  background: rgb(25, 189, 175);
+  border-radius: 5px;
+  width: calc(50% - 40px);
+  padding: 20px;
+  position: relative;
+}
+.wrapper .row section::before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: rgb(0, 0, 0);
+  top: 28px;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+.row-1 section::before {
+  right: -7px;
+}
+.row-2 section::before {
+  left: -7px;
+}
+.row section .icon,
+.center-line .scroll-icon {
+  position: absolute;
+  background: #f2f2f2;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ff7979;
+  font-size: 17px;
+  box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+.center-line .scroll-icon {
+  bottom: 0px;
+  left: 50%;
+  font-size: 25px;
+  transform: translateX(-50%);
+}
+.row-1 section .icon {
+  top: 15px;
+  right: -60px;
+}
+.row-2 section .icon {
+  top: 15px;
+  left: -60px;
+}
+.row section .details,
+.row section .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.row section .details .title {
+  font-size: 22px;
+  font-weight: 600;
+}
+.row section p {
+  margin: 10px 0 17px 0;
+}
+.row section .bottom a {
+  text-decoration: none;
+  background: #ff7979;
+  color: #fff;
+  padding: 7px 15px;
+  border-radius: 5px;
+  /* font-size: 17px; */
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+.row section .bottom a:hover {
+  transform: scale(0.97);
+}
+@media (max-width: 790px) {
+  .wrapper .center-line {
+    left: 40px;
+  }
+  .wrapper .row {
+    margin: 30px 0 3px 60px;
+  }
+  .wrapper .row section {
+    width: 100%;
+  }
+  .row-1 section::before {
+    left: -7px;
+  }
+  .row-1 section .icon {
+    left: -60px;
+  }
+}
+@media (max-width: 440px) {
+  .wrapper .center-line,
+  .row section::before,
+  .row section .icon {
+    display: none;
+  }
+  .wrapper .row {
+    margin: 10px 0;
+  }
+}
+/* galerti */
+.container {
+  position: relative;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+.container .search-box {
+  position: relative;
+  height: 42px;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.search-box input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: #323334;
+  padding: 0 15px 0 45px;
+  color: #fff;
+  border-radius: 6px;
+}
+.search-box i {
+  position: absolute;
+  z-index: 2;
+  color: #999;
+  top: 50%;
+  left: 15px;
+  font-size: 20px;
+  transform: translateY(-50%);
+}
+.container .images .image-box {
+  position: relative;
+  height: 300px;
+  width: 210px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.images {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.images .image-box {
+  margin: 8px;
+}
+.images .image-box img {
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  transition: transform 0.2s linear;
+}
+.image-box:hover img {
+  transform: scale(1.05);
+}
+.image-box h6 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+/* maps */
+#map h1 {
+  text-align: center;
+  position: relative;
+  font-size: 64px;
+  color: rgb(41, 41, 41);
+  margin: 30px 0;
+  font-family: "Niconne";
+  font-weight: lighter;
+}
+
+.section_container_map {
+  height: 350px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+}
+
+.map_img iframe {
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.425);
+  width: 100%;
+}
+
+.map_img {
+  flex: 1;
+  height: 350px;
+}
+
+.map_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: whitesmoke;
+  width: 19px;
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 5px 10px;
+  border: none;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.418);
+  animation: zoom 1s infinite alternate;
+}
+
+@keyframes zoom {
+  to {
+    width: 165px;
+    padding: 7px 12px;
+  }
+}
+
+.map_list:hover {
+  cursor: pointer;
+  background-color: rgb(255, 190, 68);
+}
+/* buku tamu */
+.buku_tamu_container {
+  height: 600px;
+  background-image: url("https://images.unsplash.com/photo-1625038032515-308ab14d10b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#buku_tamu h1 {
+  text-align: center;
+  font-size: 64px;
+  color: rgb(41, 41, 41);
+  margin: 30px 0;
+  font-family: "Niconne";
+  font-weight: lighter;
+}
+
+#buku_tamu form {
+  background-color: whitesmoke;
+  max-width: 30%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+  padding: 30px 40px;
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.432);
+}
+
+#buku_tamu form input,
+#buku_tamu form select,
+#buku_tamu form textarea {
+  padding: 5px;
+  background-color: white;
+  border-color: rgb(170, 170, 170);
+  width: 100%;
+}
+
+#buku_tamu form select {
+  padding: 5px;
+  background-color: white;
+  border-color: rgb(170, 170, 170);
+  width: 100%;
+}
+
+#buku_tamu form button {
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: rgb(12, 61, 12);
+  color: white;
+  width: 100%;
+  border-radius: 10px;
+}
+
+#buku_tamu form button:hover {
+  background-color: rgb(255, 190, 68);
+  color: black;
+  cursor: pointer;
+}
+
+.input {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn {
+  display: flexbox;
+  flex-direction: row-reverse;
+}
+/* countdown */
+h1 {
+  font-size: 4rem; /* 1rem = 16px  */
+  font-weight: normal;
+  color: rgb(0, 0, 0);
+  margin-top: 5rem;
+}
+.countdown-container {
+  width: 100%;
+}
+@media screen and (max-width: 762px) {
+  h1 {
+    font-size: 24px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+.countdown-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.big-text-counter {
+  font-size: 6rem;
+  line-height: 1;
+  color: rgb(201, 57, 57);
+  margin: vertical 0 (top, bottom), horizontal 2rem (right, left);
+  font-weight: 700;
+}
+
+.countdown-elemt {
+  text-align: center;
+  width: 100%;
+}
+
+.countdown-elemt span {
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+}
+
+.audio {
+  width: 90%;
+  outline: none;
+  opacity: 0.5;
+}
